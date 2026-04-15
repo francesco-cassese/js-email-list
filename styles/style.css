@@ -36,6 +36,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.d-none {
+    display: none;
+}
+
 /*
 ==================================
 HEADER
