@@ -9,3 +9,89 @@ CSS RESET
     margin: 0;
     box-sizing: border-box;
 }
+
+/*
+==================================
+ROOT
+==================================
+*/
+
+:root {
+    --bg-body: #f1f5f9;
+    --bg-list: #fff;
+    --bg-btn: #2563eb;
+    --bg-btn-HV: #1d4ed8;
+    --color-txt-email: #334155;
+    --color-txt-btn: #fff;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+==================================
+HEADER
+==================================
+*/
+
+.container-header {
+    text-align: center;
+}
+
+/*
+==================================
+MAIN
+==================================
+*/
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-list {
+    min-height: 450px;
+    aspect-ratio: 1;
+    margin-top: 50px;
+    background-color: var(--bg-list);
+    text-align: center;
+}
+
+.container-list ul {
+    list-style: none;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.container-list li {
+    padding: 11px 20px;
+}
+
+.container-list a {
+    color: var(--color-txt-email);
+    text-decoration: none;
+}
+
+.container-list a:hover {
+    text-decoration: underline;
+}
+
+#btn-refresh {
+    margin-top: 25px;
+    padding: 12px 24px;
+    background-color: var(--bg-btn);
+    color: var(--color-txt-btn);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#btn-refresh:hover {
+    background-color: var(--bg-btn-HV);
+    transform: scale(1.1);
+}
