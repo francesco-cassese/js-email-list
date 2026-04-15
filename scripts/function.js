@@ -14,11 +14,12 @@ const chiamataApi = () => {
 // --- FUNZIONE STAMPA LISTA ---
 
 const stampaElemListaIntera = arrayEmail => {
-    let contenutoHtml = '';                                                         //Stringa d'appogio
-    for (let i = 0; i < arrayEmail.length; i++) {
-        contenutoHtml += `<li><a href="#">${arrayEmail[i]}<a/></li>`;               //Creo la riga della lista 
-    }
-    lista.innerHTML = contenutoHtml;                                                //sovrascrivo il contenuto   
+    const contenutoHtml = arrayEmail.map(email => {                                 //Trasformo l'array del server in un array di stringhe
+        return `<li><a href="#">${email}</a></li>`;                                 //Restituisco la stringa per ogni email
+    });
+    const stringaFinale = contenutoHtml.join('');                                   //Unisco tutto in un unica stringa 
+
+    lista.innerHTML = stringaFinale;                                                //ignetto la stringa nel html 
 }
 
 // --- FUNZIONE RIGENERA LISTA ---
