@@ -25,7 +25,7 @@ const stampaElemListaIntera = arrayEmail => {
 
 const listaEmail = [];                                                              //Creo un array vuoto per accumulare le 10 email  
 
-const rigeneraLista = () => {
+const generaLista = () => {
     lista.innerHTML = "";                                                           //Pulisco la lista precedente
     listaEmail.length = 0;                                                          //La faccio ripartire da 0
 
@@ -34,7 +34,8 @@ const rigeneraLista = () => {
             listaEmail.push(email);                                                 //appena mi rispode la pusho nel array
 
             if (listaEmail.length === 10) {                                         //quando l'array raggiunge i 10 elementi
-                stampaElemListaIntera(listaEmail);                                  // stampo l'intera lista
+                stampaElemListaIntera(listaEmail);                                  //stampo l'intera lista
+                contenitore.classList.remove('d-none');                             //rimuovo la classe d-none dal contenitore
             }
         });
     }
