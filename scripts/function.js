@@ -14,5 +14,17 @@ const chiamataApi = () => {
 // FUNZIONE STAMPA LISTA
 
 const stampaElemLista = email => {
-    lista.innerHTML += `<li>${email}</li>`;
+    lista.innerHTML += `<li>${email}</li>`;                                         //Creo la riga della lista
+}
+
+// FUNZIONE RIGENERA LISTA
+
+const rigeneraLista = () => {
+    lista.innerHTML = "";                                                           //Pulisco la lista vechia
+
+    for (let i = 0; i < 10; i++) {                                                  //inizio un ciclo con 10 interazioni
+        chiamataApi().then(email =>                                                 //Ad ogni interazione faccio una richiesta al server
+            stampaElemLista(email)                                                  //appena mi rispode stampo la nuova lista in pagina
+        );
+    }
 }
