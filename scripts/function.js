@@ -16,7 +16,7 @@ const chiamataApi = () => {
 const stampaElemListaIntera = arrayEmail => {
     let contenutoHtml = '';                                                         //Stringa d'appogio
     for (let i = 0; i < arrayEmail.length; i++) {
-        contenutoHtml += `<li>${arrayEmail[i]}</li>`;                               //Creo la riga della lista 
+        contenutoHtml += `<li><a href="#">${arrayEmail[i]}<a/></li>`;                               //Creo la riga della lista 
     }
     lista.innerHTML = contenutoHtml;                                                //sovrascrivo il contenuto   
 }
