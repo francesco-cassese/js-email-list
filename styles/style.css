@@ -17,12 +17,18 @@ ROOT
 */
 
 :root {
-    --bg-body: #f1f5f9;
+    --bg-body: #eff6ff;
+    --color-txt-title: #1e3a8a;
+    --bd-color-title: #1e3a8a;
+    --color-description: #475569;
+    --color-span: #2563eb;
+    --bg-span: #f59e0b;
     --bg-list: #fff;
     --bg-btn: #2563eb;
     --bg-btn-HV: #1d4ed8;
     --color-txt-email: #334155;
     --color-txt-btn: #fff;
+    --bd-color-email: #f1f5f9;
 }
 
 body {
@@ -38,6 +44,31 @@ HEADER
 
 .container-header {
     text-align: center;
+}
+
+.title-header {
+    color: var(--color-txt-title);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 40px;
+    border-bottom: 4px solid var(--bd-color-title);
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.description-header {
+    font-size: 18px;
+    color: var(--color-description);
+    line-height: 28px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.span-header {
+    color: var(--color-span);
+    font-weight: 800;
+    text-shadow: 2px 2px 0px rgba(124, 58, 237, 0.1);
 }
 
 /*
@@ -58,16 +89,17 @@ MAIN
     margin-top: 50px;
     background-color: var(--bg-list);
     text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .container-list ul {
     list-style: none;
-    padding-left: 10px;
     overflow: hidden;
 }
 
 .container-list li {
     padding: 11px 20px;
+    border-bottom: 2px solid var(--bd-color-email);
 }
 
 .container-list a {
@@ -89,6 +121,7 @@ MAIN
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
 }
 
 #btn-refresh:hover {
