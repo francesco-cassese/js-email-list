@@ -24,11 +24,9 @@ const stampaElemListaIntera = arrayEmail => {
 
 // --- FUNZIONE RIGENERA LISTA ---
 
-const listaEmail = [];                                                              //Creo un array vuoto per accumulare le 10 email  
-
 const generaLista = () => {
     lista.innerHTML = "";                                                           //Pulisco la lista precedente
-    listaEmail.length = 0;                                                          //La faccio ripartire da 0
+    const listaEmail = [];                                                          //Creo un array vuoto per accumulare le 10 email  
 
     for (let i = 0; i < 10; i++) {                                                  //inizio un ciclo con 10 interazioni
         chiamataApi().then(email => {                                               //Ad ogni interazione faccio una richiesta al server
